@@ -1,0 +1,60 @@
+//ClaseMain
+package coninterfases;
+
+import Interfases.Coche;
+
+public class Main {
+
+    static CocheCRUD cocheCRUD;
+
+
+    public static void main(String[] args) {
+
+        cocheCRUD.findAdd();
+        cocheCRUD.save(new Coche());
+
+
+    }
+}
+
+//ArchivoInterfase
+package coninterfases;
+
+import Interfases.Coche;
+
+import java.util.List;
+
+public interface CocheCRUD {
+
+    void save(Coche coche);
+
+    List<Coche> findAdd();
+
+    void delete(Coche coche);
+
+}
+
+
+//cocheCRUDExcel
+package coninterfases;
+
+import Interfases.Coche;
+
+import java.util.List;
+
+public class CocheCRUDexcel implements CocheCRUD{
+    @Override
+    public void save(Coche coche) {
+
+    }
+
+    @Override
+    public List<Coche> findAdd() {
+        return null;
+    }
+
+    @Override
+    public void delete(Coche coche) {
+
+    }
+}
